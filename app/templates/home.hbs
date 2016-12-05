@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Öppettider för Google Business</h1>
+  </div>
+</div>
+<div class="row">
+  <form>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="from-date-input">fr.o.m.</label>
+        {{input id="from-date-input" type="date" value=from class="form-control"}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="to-date-input">t.o.m.</label>
+        {{input id="to-date-input" type="date" value=to class="form-control"}}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="library-input">Bibliotek</label>
+        {{#x-select class="form-control" value=library as |xs|}}
+        {{#xs.option}}Välj bibliotek{{/xs.option}}
+          {{#each application.libraries as |library|}}
+            {{#xs.option value=library.id}}{{library.name}}{{/xs.option}}
+          {{/each}}
+        {{/x-select}}
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <label for="hours-output">Öppettider</label>
+    {{textarea id="hours-output" class="form-control" value=hours rows="6"}}
+  </div>
+</div>
