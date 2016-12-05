@@ -43,9 +43,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    
-    ENV.rootURL = '/googleopeninghours';
-
+    ENV.rootURL = '/googleopeninghours/';
   }
 
   return ENV;
