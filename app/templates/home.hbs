@@ -1,6 +1,15 @@
 <div class="row">
   <div class="col-xs-12">
     <h1>Öppettider för Google Business</h1>
+    <p class="lead">Generera Särskilda öppettider för Google Business. Öppettiderna hämtas från bokningsdatabasen. Gör så här:</p>
+    <ol>
+      <li>Ladda hem excel-ark med alla platser från Google Business (Hämta platser).</li>
+      <li>Kontrollera att rätt öppettider är inlagda i bokningsdatabasen och vilka datum som påverkas för respektive bibliotek.</li>
+      <li>Ange motsvarande datum och välj bibliotek.</li>
+      <li>Kopiera textsträngen som genereras och klistra in i kolumnen Särskilda öppettider i excel-arket.</li>
+      <li>Upprepa för alla bibliotek som påverkas.</li>
+      <li>Importera filen till Google Business (röda knappen längst ner till höger).</li>
+    </ol>
   </div>
 </div>
 <div class="row">
@@ -8,13 +17,13 @@
     <div class="col-md-4">
       <div class="form-group">
         <label for="from-date-input">fr.o.m.</label>
-        {{input id="from-date-input" type="date" value=from class="form-control"}}
+        {{input id="from-date-input" type="date" value=from class="form-control" placeholder="YYYY-MM-DD"}}
       </div>
     </div>
     <div class="col-md-4">
       <div class="form-group">
         <label for="to-date-input">t.o.m.</label>
-        {{input id="to-date-input" type="date" value=to class="form-control"}}
+        {{input id="to-date-input" type="date" value=to class="form-control" placeholder="YYYY-MM-DD"}}
       </div>
     </div>
     <div class="col-md-4">
